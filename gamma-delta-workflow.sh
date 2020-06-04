@@ -66,11 +66,12 @@ if [ -z ${1} ] && [ -z ${2} ]; then
 	helpFunction;
 	exit 0;
 else
-if [-z ${2} ]; then 
+if [ -z ${2} ]; then 
 	R1=$1
 	echo "Processing single-end reads file: "; 
 	echo "> $R1"; 
 else
+	R1=$1
 	R2=$2
 	echo "Processing paired-end reads files: "; 
 	echo "> R1: ${R1} ";
